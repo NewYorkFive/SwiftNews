@@ -20,11 +20,12 @@
 		944A75231EE01E0000EE5215 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A750B1EE01E0000EE5215 /* UIColor+Extension.swift */; };
 		944A75241EE01E0000EE5215 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A750C1EE01E0000EE5215 /* UILabel+Extension.swift */; };
 		944A75251EE01E0000EE5215 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A750D1EE01E0000EE5215 /* UIView+Extension.swift */; };
-		944A75291EE01E0000EE5215 /* ignore in Resources */ = {isa = PBXBuildFile; fileRef = 944A75161EE01E0000EE5215 /* ignore */; };
 		944A752A1EE01E0000EE5215 /* ignore in Resources */ = {isa = PBXBuildFile; fileRef = 944A75191EE01E0000EE5215 /* ignore */; };
 		944A752B1EE01E0000EE5215 /* ignore in Resources */ = {isa = PBXBuildFile; fileRef = 944A751B1EE01E0000EE5215 /* ignore */; };
 		944A752C1EE01E0000EE5215 /* ignore in Resources */ = {isa = PBXBuildFile; fileRef = 944A751D1EE01E0000EE5215 /* ignore */; };
 		944A752D1EE01E0000EE5215 /* ignore in Resources */ = {isa = PBXBuildFile; fileRef = 944A751F1EE01E0000EE5215 /* ignore */; };
+		948C5AB11EE20FC900465060 /* DLChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5AB01EE20FC900465060 /* DLChannelCollectionViewCell.swift */; };
+		948C5AB31EE20FF900465060 /* DLChannelCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5AB21EE20FF900465060 /* DLChannelCollectionViewFlowLayout.swift */; };
 		C0251CFA00E28ED240BF92E4 /* Pods_SwiftNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A983356C9938633FF8F02C3 /* Pods_SwiftNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +47,12 @@
 		944A750B1EE01E0000EE5215 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		944A750C1EE01E0000EE5215 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		944A750D1EE01E0000EE5215 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		944A75161EE01E0000EE5215 /* ignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ignore; sourceTree = "<group>"; };
 		944A75191EE01E0000EE5215 /* ignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ignore; sourceTree = "<group>"; };
 		944A751B1EE01E0000EE5215 /* ignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ignore; sourceTree = "<group>"; };
 		944A751D1EE01E0000EE5215 /* ignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ignore; sourceTree = "<group>"; };
 		944A751F1EE01E0000EE5215 /* ignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ignore; sourceTree = "<group>"; };
+		948C5AB01EE20FC900465060 /* DLChannelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLChannelCollectionViewCell.swift; sourceTree = "<group>"; };
+		948C5AB21EE20FF900465060 /* DLChannelCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLChannelCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		E133F743B870177B2160EBE6 /* Pods-SwiftNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftNews/Pods-SwiftNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +168,8 @@
 		944A75151EE01E0000EE5215 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				944A75161EE01E0000EE5215 /* ignore */,
+				948C5AB01EE20FC900465060 /* DLChannelCollectionViewCell.swift */,
+				948C5AB21EE20FF900465060 /* DLChannelCollectionViewFlowLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,7 +294,6 @@
 				944A752C1EE01E0000EE5215 /* ignore in Resources */,
 				944A74FF1EE01D1F00EE5215 /* LaunchScreen.storyboard in Resources */,
 				944A752A1EE01E0000EE5215 /* ignore in Resources */,
-				944A75291EE01E0000EE5215 /* ignore in Resources */,
 				944A752B1EE01E0000EE5215 /* ignore in Resources */,
 				9444FC191EE0495D00984AA1 /* topic_news.json in Resources */,
 				944A74FC1EE01D1F00EE5215 /* Assets.xcassets in Resources */,
@@ -353,7 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948C5AB31EE20FF900465060 /* DLChannelCollectionViewFlowLayout.swift in Sources */,
 				9444FC151EE0456F00984AA1 /* DLFrameViewController.swift in Sources */,
+				948C5AB11EE20FC900465060 /* DLChannelCollectionViewCell.swift in Sources */,
 				944A75211EE01E0000EE5215 /* String+Extension.swift in Sources */,
 				944A75251EE01E0000EE5215 /* UIView+Extension.swift in Sources */,
 				9444FC1B1EE049DF00984AA1 /* DLChannelModel.swift in Sources */,

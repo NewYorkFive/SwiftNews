@@ -30,4 +30,13 @@ extension UIButton{
         setTitle(title, for: .normal)
         addTarget(target, action:action, for: .touchUpInside)
     }
+    
+    convenience init(title:String, target:Any?, action:Selector, fontSize:CGFloat, color:UIColor){
+        self.init()
+        setTitle(title, for: .normal)
+        addTarget(target, action: action, for: .touchUpInside)
+        titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+        titleLabel?.textColor = color
+        titleLabel?.textAlignment = .center
+    }
 }
