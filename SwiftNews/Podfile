@@ -8,5 +8,8 @@ target 'SwiftNews' do
   # Pods for SwiftNews
 
   pod 'SnapKit'
+  pod 'SDWebImage'
+  pod 'YYModel'
+  pod 'AFNetworking'
 
 end

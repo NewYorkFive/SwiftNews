@@ -17,4 +17,13 @@ extension UILabel{
         label.textColor = UIColor.white
         return label
     }
+    
+//    convenience init(title:String, target:Any?, action:Selector, fontSize:CGFloat, color:UIColor){
+    convenience init(title:String, fontSize:CGFloat, color:UIColor){
+        self.init()
+        self.text = title
+        self.textColor = color
+        self.font = UIFont.systemFont(ofSize: fontSize)
+    }
+
 }

@@ -9,5 +9,13 @@
 import UIKit
 
 class DLChannelCollectionViewFlowLayout: UICollectionViewFlowLayout {
-
+    override func prepare() {
+        super.prepare()
+        itemSize = (self.collectionView?.bounds.size)!;
+        minimumLineSpacing = 0
+        minimumInteritemSpacing = 0
+        scrollDirection = .horizontal;
+        collectionView?.bounces = false
+        collectionView?.isPagingEnabled = true
+    }
 }

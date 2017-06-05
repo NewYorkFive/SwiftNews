@@ -26,6 +26,13 @@
 		944A752D1EE01E0000EE5215 /* ignore in Resources */ = {isa = PBXBuildFile; fileRef = 944A751F1EE01E0000EE5215 /* ignore */; };
 		948C5AB11EE20FC900465060 /* DLChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5AB01EE20FC900465060 /* DLChannelCollectionViewCell.swift */; };
 		948C5AB31EE20FF900465060 /* DLChannelCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5AB21EE20FF900465060 /* DLChannelCollectionViewFlowLayout.swift */; };
+		948C5AB51EE2173E00465060 /* DLSingleNewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5AB41EE2173E00465060 /* DLSingleNewModel.swift */; };
+		948C5AB71EE219EB00465060 /* DLChannelNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5AB61EE219EB00465060 /* DLChannelNewsTableViewController.swift */; };
+		948C5ABC1EE23E4200465060 /* DLSingleBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5ABB1EE23E4200465060 /* DLSingleBaseTableViewCell.swift */; };
+		948C5ABE1EE23E8A00465060 /* DLSingleNormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5ABD1EE23E8A00465060 /* DLSingleNormalTableViewCell.swift */; };
+		948C5AC21EE240A000465060 /* DLSingleBigPicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5AC11EE240A000465060 /* DLSingleBigPicTableViewCell.swift */; };
+		948C5AC41EE240B300465060 /* DLSinglePicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5AC31EE240B300465060 /* DLSinglePicsTableViewCell.swift */; };
+		948C5AC81EE24D8F00465060 /* DLNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C5AC71EE24D8F00465060 /* DLNetworkTools.swift */; };
 		C0251CFA00E28ED240BF92E4 /* Pods_SwiftNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A983356C9938633FF8F02C3 /* Pods_SwiftNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +60,13 @@
 		944A751F1EE01E0000EE5215 /* ignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ignore; sourceTree = "<group>"; };
 		948C5AB01EE20FC900465060 /* DLChannelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLChannelCollectionViewCell.swift; sourceTree = "<group>"; };
 		948C5AB21EE20FF900465060 /* DLChannelCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLChannelCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		948C5AB41EE2173E00465060 /* DLSingleNewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSingleNewModel.swift; sourceTree = "<group>"; };
+		948C5AB61EE219EB00465060 /* DLChannelNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLChannelNewsTableViewController.swift; sourceTree = "<group>"; };
+		948C5ABB1EE23E4200465060 /* DLSingleBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSingleBaseTableViewCell.swift; sourceTree = "<group>"; };
+		948C5ABD1EE23E8A00465060 /* DLSingleNormalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSingleNormalTableViewCell.swift; sourceTree = "<group>"; };
+		948C5AC11EE240A000465060 /* DLSingleBigPicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSingleBigPicTableViewCell.swift; sourceTree = "<group>"; };
+		948C5AC31EE240B300465060 /* DLSinglePicsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSinglePicsTableViewCell.swift; sourceTree = "<group>"; };
+		948C5AC71EE24D8F00465060 /* DLNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLNetworkTools.swift; sourceTree = "<group>"; };
 		E133F743B870177B2160EBE6 /* Pods-SwiftNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftNews/Pods-SwiftNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +123,7 @@
 		944A75061EE01E0000EE5215 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				948C5AC51EE24D8300465060 /* Tools */,
 				944A75071EE01E0000EE5215 /* Common */,
 				944A750E1EE01E0000EE5215 /* Frame */,
 				944A75171EE01E0000EE5215 /* newFeature */,
@@ -145,6 +160,7 @@
 			children = (
 				9444FC141EE0456F00984AA1 /* DLFrameViewController.swift */,
 				9444FC161EE0460100984AA1 /* DLFrameNavController.swift */,
+				948C5AB61EE219EB00465060 /* DLChannelNewsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				9444FC1A1EE049DF00984AA1 /* DLChannelModel.swift */,
+				948C5AB41EE2173E00465060 /* DLSingleNewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +185,7 @@
 		944A75151EE01E0000EE5215 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				948C5AB81EE23DD200465060 /* SingleNewsCell */,
 				948C5AB01EE20FC900465060 /* DLChannelCollectionViewCell.swift */,
 				948C5AB21EE20FF900465060 /* DLChannelCollectionViewFlowLayout.swift */,
 			);
@@ -215,6 +233,33 @@
 				944A751F1EE01E0000EE5215 /* ignore */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		948C5AB81EE23DD200465060 /* SingleNewsCell */ = {
+			isa = PBXGroup;
+			children = (
+				948C5ABB1EE23E4200465060 /* DLSingleBaseTableViewCell.swift */,
+				948C5ABD1EE23E8A00465060 /* DLSingleNormalTableViewCell.swift */,
+				948C5AC11EE240A000465060 /* DLSingleBigPicTableViewCell.swift */,
+				948C5AC31EE240B300465060 /* DLSinglePicsTableViewCell.swift */,
+			);
+			name = SingleNewsCell;
+			sourceTree = "<group>";
+		};
+		948C5AC51EE24D8300465060 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				948C5AC61EE24D8F00465060 /* NetworkTools */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		948C5AC61EE24D8F00465060 /* NetworkTools */ = {
+			isa = PBXGroup;
+			children = (
+				948C5AC71EE24D8F00465060 /* DLNetworkTools.swift */,
+			);
+			path = NetworkTools;
 			sourceTree = "<group>";
 		};
 		A754FF9A0611AE3428657617 /* Pods */ = {
@@ -359,13 +404,20 @@
 				9444FC151EE0456F00984AA1 /* DLFrameViewController.swift in Sources */,
 				948C5AB11EE20FC900465060 /* DLChannelCollectionViewCell.swift in Sources */,
 				944A75211EE01E0000EE5215 /* String+Extension.swift in Sources */,
+				948C5AC41EE240B300465060 /* DLSinglePicsTableViewCell.swift in Sources */,
 				944A75251EE01E0000EE5215 /* UIView+Extension.swift in Sources */,
 				9444FC1B1EE049DF00984AA1 /* DLChannelModel.swift in Sources */,
 				944A74F51EE01D1F00EE5215 /* AppDelegate.swift in Sources */,
 				944A75241EE01E0000EE5215 /* UILabel+Extension.swift in Sources */,
+				948C5AB71EE219EB00465060 /* DLChannelNewsTableViewController.swift in Sources */,
+				948C5ABC1EE23E4200465060 /* DLSingleBaseTableViewCell.swift in Sources */,
+				948C5AB51EE2173E00465060 /* DLSingleNewModel.swift in Sources */,
+				948C5AC21EE240A000465060 /* DLSingleBigPicTableViewCell.swift in Sources */,
 				9444FC171EE0460100984AA1 /* DLFrameNavController.swift in Sources */,
+				948C5AC81EE24D8F00465060 /* DLNetworkTools.swift in Sources */,
 				944A75231EE01E0000EE5215 /* UIColor+Extension.swift in Sources */,
 				944A75221EE01E0000EE5215 /* UIButton+Extension.swift in Sources */,
+				948C5ABE1EE23E8A00465060 /* DLSingleNormalTableViewCell.swift in Sources */,
 				944A75201EE01E0000EE5215 /* DLCommon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,6 +30,8 @@ class DLFrameViewController: UIViewController {
         setupChannelScrollView()
         
         setupChannelCollectionView()
+        
+        currentTitleButton = channelTitleButtonArray[0]
 //        for item in channelModelArray {
 //            print("\n")
 //            print(item.tid!)
@@ -66,6 +68,8 @@ class DLFrameViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         channelScrollViewContainView.frame = CGRect(x: 0, y: 0, width: Double(channelTitleButtonArray.count) * channelButtonWidth, height: channelButtonHeight)
+        
+        channelScrollView.contentSize = channelScrollViewContainView.frame.size
         
         for index in 0..<channelTitleButtonArray.count {
             channelTitleButtonArray[index].frame = CGRect(x: Double(index) * channelButtonWidth, y: 0, width: channelButtonWidth, height: channelButtonHeight)
@@ -114,16 +118,48 @@ class DLFrameViewController: UIViewController {
     fileprivate lazy var channelTitleButtonArray:[UIButton] = {
         var array = [UIButton]()
         for item in self.channelModelArray{
-            let button = UIButton.init(title: item.tname!, target: self, action: #selector(buttonAction(sender:)), fontSize: 15, color: UIColor.white)
+            let button = UIButton.init(title: item.tname!, target: self, action: #selector(titleButtonAction(sender:)), fontSize: 15, color: UIColor.white)
 //            let button = UIButton.init(title: item.tname!, target: self, action: #selector(buttonAction(sender:)))
             array.append(button)
         }
         return array
     }()
     
-    @objc fileprivate func buttonAction(sender:UIButton) -> Void {
-        print("buttonAction")
+    @objc fileprivate func titleButtonAction(sender:UIButton) -> Void {
+        if currentTitleButton == sender {
+            return;
+        }
+        buttonChangeWithButton(sender: currentTitleButton, percentage: 0.0)
+        buttonChangeWithButton(sender: sender, percentage: 1.0)
+        currentTitleButton = sender;
+        
+        var offsetX = sender.center.x - UIScreen.main.bounds.size.width * 0.5;
+        
+        if offsetX > channelScrollView.contentSize.width - ScreenWidth * 0.5 {
+            offsetX = channelScrollView.contentSize.width - ScreenWidth * 0.5
+        }
+
+        
+        if offsetX < 0 {
+            offsetX = 0
+        }
+        
+//        print(channelScrollView.contentSize.width)
+//        print(offsetX)
+
+        channelScrollView.setContentOffset(CGPoint.init(x: offsetX, y: 0), animated: true)
+        
+        let index:Int = Int(sender.frame.origin.x / sender.frame.size.width)
+        let indexPath = IndexPath.init(item: index, section: 0)
+        channelCollectionView.scrollToItem(at: indexPath, at:.left , animated: false)
     }
+    
+    func buttonChangeWithButton(sender:UIButton, percentage:Float) -> Void {
+        sender.setTitleColor(UIColor.init(colorLiteralRed: 1.0, green: 1 - percentage, blue: 1 - percentage, alpha: 1.0), for: .normal)
+        sender.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(15 + percentage * 2))
+    }
+    
+    fileprivate lazy var currentTitleButton:UIButton = UIButton()
     
     fileprivate lazy var channelModelArray:[DLChannelModel] = try! {
         var array = [DLChannelModel]();
@@ -160,6 +196,21 @@ extension DLFrameViewController:UICollectionViewDataSource{
 }
 
 extension DLFrameViewController:UICollectionViewDelegate{
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index:Int = Int(scrollView.contentOffset.x / scrollView.width)
+        titleButtonAction(sender: channelTitleButtonArray[index])
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let floatIndex = scrollView.contentOffset.x / scrollView.width
+        let intIndex = Int(floatIndex)
+        let percentage = floatIndex - CGFloat(intIndex)
+        
+        buttonChangeWithButton(sender: channelTitleButtonArray[intIndex], percentage: Float(1 - percentage))
+        if intIndex + 1 < self.channelTitleButtonArray.count {
+            buttonChangeWithButton(sender: channelTitleButtonArray[intIndex + 1], percentage: Float(percentage))
+        }
+    }
     
 }
 
