@@ -197,12 +197,18 @@ extension DLFrameViewController:UICollectionViewDataSource{
 
 extension DLFrameViewController:UICollectionViewDelegate{
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let index:Int = Int(scrollView.contentOffset.x / scrollView.width)
+        var index:Int = Int(scrollView.contentOffset.x / scrollView.width)
+        if scrollView.width == 0{
+            index = 0;
+        }
         titleButtonAction(sender: channelTitleButtonArray[index])
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let floatIndex = scrollView.contentOffset.x / scrollView.width
+        var floatIndex = scrollView.contentOffset.x / scrollView.width
+        if scrollView.width == 0 {
+            floatIndex = 0.0;
+        }
         let intIndex = Int(floatIndex)
         let percentage = floatIndex - CGFloat(intIndex)
         
